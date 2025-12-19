@@ -40,5 +40,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Style checks
+      - name: Style checks > prettier package
         run: npm run format:check
+
+      - name: Code quality checks > eslint
+        run: npm run lint
