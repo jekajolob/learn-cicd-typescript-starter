@@ -12,6 +12,6 @@ describe("person", () => {
 
   test("is active", () => {
     expect(person.isActive).toBeTruthy();
-    expect(person.age).toBeGreaterThanOrEqual(32)
+    expect(person.age).toBeGreaterThanOrEqual(32);
   });
 });
