@@ -35,3 +35,6 @@ jobs:
 
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
+      
+      - name: Build and push Docker image to Artifact Registry (via Cloud Build)
+        run: 'gcloud builds submit --tag us-central1-docker.pkg.dev/high-torch-481823-d7/notely-ar-repo/notely:latest .'
