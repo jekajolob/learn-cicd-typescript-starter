@@ -38,3 +38,6 @@ jobs:
       
       - name: Build and push Docker image to Artifact Registry (via Cloud Build)
         run: 'gcloud builds submit --tag us-central1-docker.pkg.dev/high-torch-481823-d7/notely-ar-repo/notely:latest .'
+
+      - name: Deploy to Cloud Run
+        run: gcloud run deploy notely --image us-central1-docker.pkg.dev/high-torch-481823-d7/notely-ar-repo/notely:latest --region us-central1 --allow-unauthenticated --project high-torch-481823-d7 --max-instances=4
